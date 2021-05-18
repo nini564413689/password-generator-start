@@ -11,9 +11,13 @@ nr_numbers = int(input(f"How many numbers would you like?\n"))
 
 #Eazy Level - Order not randomised:
 #e.g. 4 letter, 2 symbol, 2 number = JduE&!91
+# can use random.choice with for loop to do the same thing below
+
 letters_list = random.choices (letters, k = nr_letters)
 numbers_list = random.choices (numbers, k = nr_numbers)
 symbols_list = random.choices (symbols, k = nr_symbols)
+#for char in range (1, nr_letters + 1)
+#pw_list.append (random.choice (letters))
 pw_list = letters_list + symbols_list + numbers_list
 pw = ""
 for n in range (0, len(pw_list)):
